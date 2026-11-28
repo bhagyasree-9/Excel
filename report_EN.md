@@ -1,11 +1,11 @@
-# Excel report
+# Excel Report
 
 This report approaches these following points:
 1. Device compliance
 2. Battery and device health
 3. Disk usage
 
-## 1. Device compliance
+## 1. Device Compliance
 Two conditions were required for a device to be compliant:
 1. Its OS version had to be compliant.
 2. Its Chrome version had to be compliant.
@@ -19,10 +19,10 @@ The following columns were used to determine whether a device was compliant:
 - **Compliance**: Returns `TRUE` if both `OS_Compliance` and `Chrome_Compliance` are `TRUE`; otherwise, it returns `FALSE`.
 - **Reason**: Uses `IF()` statements to identify whether a device is non-compliant due to its OS version, Chrome version, or both.
 
-### OS version compliance
+### OS Version Compliance
 The OS versions were extracted into a new table using Excel's `UNIQUE()` function. A second column was then added, in which each OS version was manually assigned a `TRUE` or `FALSE` value depending on whether it was considered compliant.
 
-### Chrome version compliance
+### Chrome Version Compliance
 Any Chrome version older than 140.0.0.0 was considered non-compliant. The `IF()` and `TEXTSPLIT()` functions were used to evaluate each Chrome version against this requirement, returning `TRUE` if the version was compliant and `FALSE` otherwise.
 
 ### Results
